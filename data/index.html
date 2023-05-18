@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Card Example</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div id="loading-bar"></div>
+
+        <div id="welcome" class="card text-center" style="display: none;">
+            <div class="card-header">
+                WELCOME
+            </div>
+            <div class="card-body">
+                <p class="card-text"></p>
+
+                <img src="icon.png" class="rounded-circle my-3" alt="Icon">
+
+                <button id="view-data" class="btn btn-primary">View Data</button>
+                <button id="record-data" class="btn btn-primary">Record Data</button>
+            </div>
+        </div>
+
+
+        <div id="select-group" class="card text-center" style="display: none;">
+            <div class="card-header">
+                Select a group
+            </div>
+            <div class="card-body">
+                <button id="group-1" class="btn btn-primary">Group 1</button><br>
+                <button id="group-2" class="btn btn-primary">Group 2</button><br>
+                <button id="group-3" class="btn btn-primary">Group 3</button>
+            </div>
+        </div>
+
+        <div id="view-data-page" style="display: none;">
+            <div class="row">
+                <div class="card">
+                    <div class="card-header">
+                        Readings
+                    </div>
+                    <div class="card-body">
+                        <div id="chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="live-data-page" style="display: none;">
+            <div class="card">
+                <div class="card-header">
+                    Sensor Readings
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Scale Reading:</h5>
+                            <p>0.2 grams</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Temperature:</h5>
+                            <p>25.6 °C</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Humidity:</h5>
+                            <p>56%</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Battery:</h5>
+                            <p>85%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button id="go-back" class="btn btn-secondary">Home</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-primary">Record Again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Bootstrap JavaScript -->
+    <script src="apexcharts.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
